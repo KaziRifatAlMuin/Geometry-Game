@@ -37,4 +37,19 @@ Zunaed Nudar
 zunaed
 CSE
 2107041
-0
+90
+Arman Rahman Rafi
+rafi
+CSE
+2107046
+30
+Tarikul Islam
+tarikul
+CSE
+2107048
+30
+daud
+daud
+cse
+2107002
+180

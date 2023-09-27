@@ -26,7 +26,7 @@ Concepts of OOP used in the project:
 
 1. There are total of 1 + 2 + 4 + 3 + 1 + 3 = 14 classes, initialized with constructors, have destructors
 2. Three level inheritance is used here. Polygon -> (Quad, Tri, Any) -> (Rec, Sq, Prl, trp) (Equ, Iso, Sce)
-3. Polymorphism is used : To Calculate Area - overiding the functions in derived classes
+3. Polymorphism is used : To Calculate Area - overriding the functions in derived classes
 4. Abstract class and Pure Virtual Function is used : To Ask Question (In Game)
 5. Friend class is used : To connect Polygon with Game, Gamer with Database
 6. Friend function is used : To search player, To Run the game, For Home Page
@@ -680,7 +680,9 @@ void PlayGame(string user)
         Admin.ShowLeaderBoard();
         Home();
     }
-    else if(k == 3) return;
+    else{
+        return;
+    }
 }
 
 void Home()
@@ -689,7 +691,7 @@ void Home()
     cout << "---------------------------------------------------------\n";
     cout << "| | | | | | | | | | | Geometry Game | | | | | | | | | | |\n";
     cout << "---------------------------------------------------------\n";
-    cout << "1. Register as a new Gamer\n";
+    cout << "1. Register as a New Player\n";
     cout << "2. Play Game\n";
     cout << "3. Leaderboard\n";
     cout << "4. Search a Player\n";
@@ -697,10 +699,6 @@ void Home()
     cout << "\nSelect an Option : ";
     int k;
     cin >> k;
-    while(k > 5 || k < 1){
-        cout << "You Have Entered a wrong Key! Enter again : ";
-        cin >> k;
-    }
     if(k == 1){
         cin >> Player;
         Admin.AddNewGamer(Player);
@@ -725,6 +723,9 @@ void Home()
         Home();
     }
     else if(k == 5){
+        return;
+    }
+    else{
         return;
     }
 }
